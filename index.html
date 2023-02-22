@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="shortcut icon" href="favicon.ico">
+	<title>Layout «JARA»</title>
+</head>
+
+<body>
+	<h1>Layout «JARA»</h1>
+	<div class="container">
+
+		<div class="rootpage">
+
+			<div class="rootpage__info">
+				Project «JARA»
+			</div>
+			<h2>Ready pages:</h2>
+			<ol class="rootpage__list">
+				<li><a target="_blank" href="home.html">Home</a></li>
+				<li><a target="_blank" href="Catalog.html">Catalog</a></li>
+				<li><a target="_blank" href="contact us.html">contact us</a></li>
+				<li><a target="_blank" href="History.html">History</a></li>
+				<li><a target="_blank" href="Experience.html">Experience</a></li>
+				<li><a target="_blank" href="MEDIA.html">MEDIA</a></li>
+				<li><a target="_blank" href="Photos and Gallery.html">Photos and Gallery</a></li>
+				<li><a target="_blank" href="Responsible hospitality.html">Responsible hospitality</a></li>
+				<li><a target="_blank" href="ROOM DETAILS.html">ROOM DETAILS</a></li>
+				<li><a target="_blank" href="Team.html">Team</a></li>
+			</ol>
+			<!-- <h2>Popup:</h2>
+         <ol class="rootpage__list">
+            <li><a target="_blank" href="home.html#"></a></li>
+         </ol> -->
+			<div class="rootpage_box">
+				<div class="rootpage__tnx">
+					<h2>Thank you for the order!</h2>
+					<p>I would appreciate a good review.</p>
+					<p>Contact again!</p>
+				</div>
+				<div class="rootpage__contacts">
+					<h2>My contacts:</h2>
+					<p>Mail: <a href="mailto:oleksandr.vy@gmail.com">oleksandr.vy@gmail.com</a></p>
+					<p>Telephone: <a href="tel:574096470">+48 574 096 470</a></p>
+
+				</div>
+			</div>
+		</div>
+
+		<div class="img-block">
+		</div>
+	</div>
+</body>
+<style>
+	@charset "UTF-8";
+	@import url("https://fonts.googleapis.com/css?family=Montserrat:regular,700&display=swap");
+
+	*,
+	*::before,
+	*::after {
+		padding: 0px;
+		margin: 0px;
+		border: 0px;
+		box-sizing: border-box;
+	}
+
+	.img-block {
+		background: url("img/Page.png");
+		width: 50%;
+		padding: 0 0 500px 0;
+		margin: 50px;
+		background-position: start center;
+		background-size: cover;
+		background-repeat: no-repeat;
+	}
+
+	@media (max-width: 767px) {
+		.img-block {
+
+			width: 80%;
+			margin: 0 auto;
+			padding: 0 0 800px 0;
+		}
+	}
+
+	html,
+	body {
+		height: 100%;
+		margin: 0;
+		padding: 0;
+		min-width: 320px;
+		width: 100%;
+		color: #fff;
+		background: #ecb7aa;
+		text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+
+	}
+
+	.container {
+		display: flex;
+		justify-content: space-between;
+		gap: 96px;
+		overflow: hidden;
+		max-width: 1024px;
+		margin: 0 auto;
+	}
+
+	@media (max-width: 767px) {
+		.container {
+			flex-direction: column;
+
+		}
+	}
+
+	body {
+
+		font-family: Montserrat;
+		font-size: 100%;
+		line-height: 1;
+		font-size: 1rem;
+
+	}
+
+	a {
+		text-decoration: underline;
+		color: white;
+	}
+
+	a:visited {
+		text-decoration: underline;
+		color: white;
+	}
+
+	a:hover {
+		text-decoration: none;
+	}
+
+	ul li {
+		list-style: none;
+
+	}
+
+	img {
+		vertical-align: top;
+	}
+
+	.wrapper {
+		width: 100%;
+		min-height: 100%;
+		overflow: hidden;
+	}
+
+	.rootpage {
+		padding: 30px;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	@media (max-width: 767px) {
+		.rootpage {
+			padding: 30px 15px;
+		}
+	}
+
+	.rootpage_box {
+		position: relative;
+
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+		align-items: center;
+		gap: 32px;
+		flex-direction: column;
+	}
+
+	h1 {
+		color: white;
+		font-size: 2.5rem;
+		width: 100%;
+		text-align: center;
+
+		margin: 20px 0px 1.25rem 0px;
+
+	}
+
+	@media (max-width: 767px) {
+		h1 {
+			font-size: 1.85rem;
+			margin: 20px 0px 1.25rem 0px;
+		}
+	}
+
+	h2 {
+		color: white;
+		font-size: 1.25rem;
+		margin: 0px 0px 1rem 0px;
+		text-align: center;
+	}
+
+	@media (max-width: 767px) {
+		h2 {
+			font-size: 1.125rem;
+			margin: 0px 0px 1rem 0px;
+		}
+	}
+
+	.rootpage__info {
+		line-height: 140%;
+		margin: 0px 0px 1.5rem 0px;
+	}
+
+	.rootpage__list {
+		margin: 0px 0px 2.25rem 1.25rem;
+	}
+
+	.rootpage__list li:not(:last-child) {
+		margin: 0px 0px 15px 0px;
+	}
+
+	.rootpage__contacts,
+	.rootpage__tnx {
+
+		min-width: 320px;
+		padding: 20px 25px;
+		line-height: 140%;
+	}
+
+	@media (max-width: 767px) {
+
+		.rootpage__contacts,
+		.rootpage__tnx {
+			border-radius: 40px;
+			padding: 20px;
+		}
+	}
+
+	.rootpage__contacts {
+		background: #5b7fa1;
+
+	}
+
+	.rootpage__contacts a {
+		color: white;
+	}
+
+	.rootpage__tnx {
+		background: #365388;
+		margin: 0px 0px 1rem 0px;
+	}
+</style>
+
+</html>
