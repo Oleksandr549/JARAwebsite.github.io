@@ -511,12 +511,12 @@ legend {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    background: #2a65ae;
+    background: hsla(0, 0%, 0%, 0.9);
     width: 70%;
     top: 0;
     padding: 30px;
     padding-top: 80px;
-    box-shadow: 0px 10px 20px rgba(65, 92, 190, 0.5);
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.5);
     transition: ease 0.5s;
   }
   .nav_list .nav_item {
@@ -546,7 +546,7 @@ legend {
   background: #ffffff;
 }
 .burger_menu.active span {
-  background: #2A66AE;
+  background: #000000;
 }
 
 .burger_menu.active span:nth-of-type(1) {
@@ -575,7 +575,7 @@ legend {
 }
 
 .burger_menu span {
-  background: #2a65ae;
+  background: #000000;
   width: 26px;
   height: 4px;
   position: absolute;
@@ -778,7 +778,7 @@ legend {
   opacity: 1;
 }
 .home_logo img {
-  width: 100px;
+  width: 150px;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -1179,6 +1179,11 @@ text_location .main_rooms {
   grid-template-columns: repeat(auto-fit, minmax(305px, 1fr));
   overflow: visible;
   margin: 60px 0;
+}
+@media (max-width: 47.99875em) {
+  .rooms_element {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
 }
 
 .rooms_element-block {
@@ -1789,11 +1794,25 @@ text_location .main_rooms {
 @media (max-width: 61.99875em) {
   .lekkiBooking_block-1 {
     padding: 20px;
+    transition: all 1s ease-out 0s;
+    transform: translate(0, -20%);
+    opacity: 0;
+  }
+  .lekkiBooking_block-1._active {
+    transform: translate(0px, 0px);
+    opacity: 1;
   }
 }
 @media (max-width: 47.99875em) {
   .lekkiBooking_block-1 {
+    transition: all 1s ease-out 0s;
+    transform: translate(0, -20%);
+    opacity: 0;
     padding: 50px;
+  }
+  .lekkiBooking_block-1._active {
+    transform: translate(0px, 0px);
+    opacity: 1;
   }
 }
 .lekkiBooking_block-1 .lekkiBooking__container {
@@ -1934,6 +1953,13 @@ text_location .main_rooms {
 @media (max-width: 61.99875em) {
   .lekkiBooking_block-3 {
     padding: 20px;
+    transition: all 1s ease-out 0s;
+    transform: translate(0, 0%);
+    opacity: 0;
+  }
+  .lekkiBooking_block-3._active {
+    transform: translate(0px, 0px);
+    opacity: 1;
   }
 }
 @media (max-width: 47.99875em) {
@@ -2025,8 +2051,9 @@ text_location .main_rooms {
   color: white;
   z-index: 20;
 }
-@media (max-width: 47.99875em) {
+@media (max-width: 61.99875em) {
   .footer {
+    opacity: 1;
     transition: all 1s ease-out 0s;
     transform: translate(0, -10%);
     opacity: 0;
@@ -2079,6 +2106,7 @@ text_location .main_rooms {
   }
 }
 .footer__contacts {
+  margin: 0 auto;
   grid-column: span 2;
   grid-row: span 2;
 }
@@ -2103,7 +2131,7 @@ text_location .main_rooms {
   }
 }
 .footer_logo img {
-  max-width: 60px;
+  max-width: 150px;
 }
 
 @media (max-width: 47.99875em) {
@@ -3201,6 +3229,93 @@ text_location .main_rooms {
   /* or 41px */
   text-transform: capitalize;
   color: #595959;
+}
+
+.main_Experiences {
+  padding: 100px 0;
+}
+.main_Experiences .Experiences_text {
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 169.9%;
+  /* or 41px */
+  text-align: center;
+  text-transform: capitalize;
+  padding: 26px 0 40px 0;
+  color: #595959;
+}
+@media (max-width: 47.99875em) {
+  .main_Experiences .Experiences_text {
+    font-size: 18px;
+  }
+}
+.main_Experiences .rooms_element {
+  display: grid;
+  gap: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(410px, 1fr));
+  overflow: visible;
+  margin: 60px 0;
+}
+@media (max-width: 61.99875em) {
+  .main_Experiences .rooms_element {
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  }
+}
+@media (max-width: 47.99875em) {
+  .main_Experiences .rooms_element {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  }
+}
+.main_Experiences .rooms_element-block {
+  width: 100%;
+  transition: all 1s ease-out 0s;
+  transform: translate(0, 20%);
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+  position: relative;
+  padding: 0 0 48% 0;
+  overflow: hidden;
+}
+.main_Experiences .rooms_element-block._active {
+  transform: translate(0px, 0px);
+  opacity: 1;
+}
+.main_Experiences .rooms_element-block:hover img {
+  transition: ease 0.5s;
+  transform: scale(1);
+  filter: brightness(100%);
+}
+.main_Experiences .rooms_element-block img {
+  filter: brightness(80%);
+  transition: ease 0.5s;
+  transform: scale(1.2);
+}
+.main_Experiences .element-block_title {
+  position: absolute;
+  width: 100%;
+  background: rgba(175, 175, 175, 0.72);
+  backdrop-filter: blur(8.5px);
+  bottom: 0px;
+  right: 0%;
+  padding: 10px 0;
+  z-index: 1;
+  font-family: "Raleway";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 195.4%;
+  /* identical to box height, or 39px */
+  text-align: center;
+  color: #FFFFFF;
+}
+@media (max-width: 47.99875em) {
+  .main_Experiences .element-block_title {
+    padding: 5px 0;
+    font-size: 16px;
+  }
 }
 .swiper {
   overflow: visible;
